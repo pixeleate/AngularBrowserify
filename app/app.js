@@ -1,10 +1,9 @@
 /**
- * Created by Marco Romero on 1/8/2015.
+ * Created by uligarcia on 03/03/15.
  */
 'use strict';
     require('./core-dependencies');
-var app = angular.module('spa',['ui.router','ui.bootstrap']);
-    require('./landing');
-    require('./todos');
+angular.module('wiki-pelis',['ui.router','ui.bootstrap']);
+    require('./wiki-pelis');
 
-    app.config(['$stateProvider','$urlRouterProvider',require('./routes')]);
+    angular.module('wiki-pelis').config(['$stateProvider','$urlRouterProvider',require('./routes')]);

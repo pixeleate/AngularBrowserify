@@ -1,5 +1,5 @@
 /**
- * Created by Marco Romero on 1/8/2015.
+ * Created by uligarcia on 03/03/15.
  */
 var gulp = require('gulp'),
     browserify = require('browserify'),
@@ -35,14 +35,14 @@ var gulp = require('gulp'),
     gulp.task('css',function(){
        return gulp.src('./app/**/*.scss')
            .pipe(sass())
-           .pipe(rename('spa.min.css'))
+           .pipe(rename('wiki-pelis.min.css'))
            .pipe(gulp.dest('./dist/styles'))
            .pipe(connect.reload());
     });
 
     gulp.task('js',function(){
        return browserify('./app/app.js',{debug:true,transform:'debowerify'}).bundle()
-           .pipe(source('spa.bundle.js'))
+           .pipe(source('wiki-pelis.bundle.js'))
            .pipe(gulp.dest('./dist/scripts'))
            .pipe(connect.reload());
     });

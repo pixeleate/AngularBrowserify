@@ -1,5 +1,5 @@
 /**
- * Created by Marco Romero on 1/8/2015.
+ * Created by uligarcia on 03/03/15.
  */
 'use strict';
 function Routes($stateProvider,$urlRouterProvider){
@@ -9,13 +9,8 @@ function Routes($stateProvider,$urlRouterProvider){
     $stateProvider
         .state('index', {
             url: '/',
-            templateUrl: 'views/landing.html',
-            controller:'LandingController as landing'
-        })
-        .state('todos', {
-            url: '/todos',
-            templateUrl: 'views/todos.html',
-            controller:'TodosController as todos'
+            templateUrl: 'views/wiki-pelis.html',
+            controller:'WikiPelisController as wiki'
         });
 }
 
